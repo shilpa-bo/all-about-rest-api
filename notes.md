@@ -62,4 +62,23 @@ curl -X POST http://localhost:3000/api/courses \
     -H "Content-Type" : application / json" \
     -d '{body of information}'
 ```
+`-H "Content-Type:application/json` header is used to specify the content type as JSON
+`-d` option provides the data we want to update/post in JSON format
 6. Input Validation
+- Best practice: never trust what client sends you, always validate the input
+- **npm joi**: defines limitations of what can be inputted 
+` npm i joi `
+7. HTTP PUT requests
+```bash
+curl -X PUT http://localhost:3000/api/courses/{existing_ID} \ 
+    -H "Content-Type" : application / json" \
+    -d '{body of information}'
+```
+
+8. HTTP Delete requests
+```bash
+curl -X DELETE http://localhost:3000/api/courses/{existing_ID} 
+```
+
+## Summary
+We have created a REST API which can add a course, update a course, delete a course, and return a course.
